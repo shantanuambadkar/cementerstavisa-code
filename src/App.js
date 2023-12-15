@@ -91,7 +91,11 @@ function App() {
       <Header></Header>
       <div>
         <div className="mainBuildingDiv">
-          <img className="mainBuilding-img" src={mainBuilding} />
+          <img
+            className="mainBuilding-img"
+            src={mainBuilding}
+            alt="MainBuilding"
+          />
         </div>
         <div className="mainBuildingDiv missionTextDiv">
           <div className="background-content">
@@ -200,8 +204,12 @@ function App() {
       </div>
 
       <div>
-        <img className="mainBuilding-img" src={grFloorPlan} />
-        <img className="mainBuilding-img" src={floorPlan} />
+        <img
+          className="mainBuilding-img"
+          src={grFloorPlan}
+          alt="GroundFloorPlan"
+        />
+        <img className="mainBuilding-img" src={floorPlan} alt="FloorPlan" />
       </div>
     </div>
   );
