@@ -1,9 +1,9 @@
 /* Header.css */
 
 header {
-  background-color: #333;
+  background-color: #191970 !important;
   color: #fff;
-  padding: 20px;
+  padding: 0px !important;
 }
 
 .navbar {

@@ -172,7 +172,7 @@ function App() {
                     variant="contained"
                     color="primary"
                     type="submit"
-                    className="missionTextDiv"
+                    className="submit-btn"
                   >
                     Submit
                   </Button>
@@ -201,15 +201,14 @@ function App() {
           Openness & Respect for others We take Pride in our work and we have
           Fun Together
         </div>
-      </div>
-
-      <div>
-        <img
-          className="mainBuilding-img"
-          src={grFloorPlan}
-          alt="GroundFloorPlan"
-        />
-        <img className="mainBuilding-img" src={floorPlan} alt="FloorPlan" />
+        <div className="floorPlan-div">
+          <img
+            className="floorplan-img"
+            src={grFloorPlan}
+            alt="GroundFloorPlan"
+          />
+          <img className="floorplan-img" src={floorPlan} alt="FloorPlan" />
+        </div>
       </div>
     </div>
   );
