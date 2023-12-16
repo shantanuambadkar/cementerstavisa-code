@@ -53,9 +53,9 @@ function App() {
       await fetch(
         url +
           new URLSearchParams({
-            'entry.2088321284': formData.leadName,
-            'entry.567898076': formData.mobile,
-            'entry.918644621': formData.email,
+            'entry.254579040': formData.leadName,
+            'entry.2078466645': formData.mobile,
+            'entry.957184084': formData.email,
           }),
         {
           mode: 'no-cors',
