@@ -1,0 +1,15 @@
+.height-width-carousel {
+  height: 120px;
+  width: 100%;
+}
+
+.floorplan-img {
+  max-width: 40%;
+  height: auto;
+  margin-bottom: 20px;
+}
+.flex-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

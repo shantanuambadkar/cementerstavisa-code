@@ -8,7 +8,6 @@
 }
 
 body {
-  font-family: 'Nunito' !important;
   margin: 0;
   padding: 0;
   background-color: #f5f5f5;
@@ -37,13 +36,20 @@ body {
   z-index: 100;
 }
 .background-content {
-  width: 100% !important;
+  background-color: blanchedalmond;
+  /* min-height: 10vh; */
+  padding: 5vh;
+  /* border: 2px dashed #e67e22; */
 }
 h2 {
   margin: 0.5%;
   color: #05a4d4;
 }
 
+.mission-text-div {
+  text-align: justify;
+  padding: 2vh !important;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -63,17 +69,17 @@ h2 {
 
 /* Form Styles */
 .form-container {
-  margin: 20px auto;
+  margin: 10px auto;
   max-width: 600px;
   padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
+  background-color: #66ccff;
+  border-radius: 10px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
 }
 
 /* Button Styles */
 .submit-btn {
-  background-color: #191970 !important;
+  /* background-color: #191970 !important; */
   color: #fff;
   padding: 10px 20px !important;
   border: none !important;
@@ -99,6 +105,56 @@ h2 {
   height: auto;
   margin-bottom: 20px;
 }
+.footer-margin {
+  margin-top: 20vh !important;
+}
+
+.MuiGrid-item {
+  padding-left: 0 !important;
+}
+
+@media (min-width: 1200px) {
+  .flexDiv {
+    display: flex;
+  }
+  .carouselDiv {
+    width: 100%;
+  }
+  .formDiv {
+    width: 40%;
+  }
+  .about-building-img {
+    height: 120vh;
+    width: 39vw !important;
+  }
+}
+
+.amenitiesDiv {
+  background-color: blanchedalmond;
+  padding: 25px;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.towerconfigDiv {
+  background-color: whitesmoke;
+  padding: 20px;
+}
+
+.about-building-img {
+  width: 100%;
+}
+
+.amenities-img {
+  width: 20%;
+}
+
+.formBorder {
+  border: 2px solid black;
+  padding-top: 30px;
+}
 .mainBuildingDiv {
   display: flex;
   justify-content: center;
@@ -107,10 +163,6 @@ h2 {
 .missionTextDiv {
   text-align: center;
   margin: 20px;
-}
-
-button {
-  margin: 20px !important;
 }
 
 h2 {

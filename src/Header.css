@@ -1,9 +1,39 @@
 /* Header.css */
 
 header {
-  background-color: #191970 !important;
-  color: #fff;
+  background-color: white !important;
+  color: darkgray !important;
   padding: 0px !important;
+  text-align: center;
+}
+
+.sticky-header {
+  position: absolute;
+  width: 100%;
+}
+
+.mobile-contact-us-header {
+  height: 30px;
+  background-color: #00a3d4;
+  color: #fff;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* .MuiTypography-root {
+  font-size: 14px !important;
+} */
+
+.end-text {
+  text-align: end;
+  margin-right: 5px !important;
+}
+
+.aTagColor {
+  color: #fff;
 }
 
 .navbar {
