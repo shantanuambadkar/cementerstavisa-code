@@ -15,8 +15,9 @@ const Header = () => {
         <Typography component="div" sx={{ flexGrow: 1 }} className="end-text">
           <a
             href="https://wa.me/8828823099"
-            target="_blank"
             className="aTagColor"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Contact Support
           </a>

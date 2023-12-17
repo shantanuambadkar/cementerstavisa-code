@@ -266,8 +266,8 @@ function App() {
           <div className="formDiv">
             <img
               className="about-building-img"
+              alt="Building"
               src={mainBuilding}
-              alt="Building Image"
             />
           </div>
         </div>
