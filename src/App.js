@@ -25,7 +25,7 @@ import cabana from './cabana.png';
 var PageErrors = {};
 
 function App() {
-  const showPopup = async () => {
+  /* const showPopup = async () => {
     const { value: formValues } = await Swal.fire({
       title: 'Enter your details',
       html:
@@ -66,7 +66,7 @@ function App() {
         console.log(e.message);
       }
     }
-  };
+  }; */
 
   // Trigger the popup
   //showPopup();
