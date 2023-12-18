@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import './App.css';
 import Header from './Header.js';
 import { TextField, Grid, Button } from '@mui/material';
-import mainBuilding from './building.png';
-import grFloorPlan from './GrFloorPlan.png';
-import floorPlan from './FloorPlan.png';
+import mainBuilding from './compressedPNG/building.webp';
+import grFloorPlan from './compressedPNG/GrFloorPlan.webp';
+import floorPlan from './compressedPNG/FloorPlan.webp';
 import Swal from 'sweetalert2';
 import Footer from './Footer.js';
 import amenities from './amenities-tower.png';
-import headerBuilding from './MainBuilding.png';
+import headerBuilding from './compressedPNG/MainBuilding.webp';
 
 var PageErrors = {};
 
