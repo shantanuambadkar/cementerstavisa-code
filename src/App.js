@@ -9,6 +9,13 @@ import Swal from 'sweetalert2';
 import Footer from './Footer.js';
 import amenities from './amenities-tower.png';
 import headerBuilding from './compressedPNG/MainBuilding.webp';
+import lift from './Lift.png';
+import healthClub from './healthClub.png';
+import vastu from './vastu.png';
+import sanitory from './bathtub.png';
+import rain from './rain.png';
+import carpark from './stackedCar.png';
+import cctv from './CCTV.png';
 
 var PageErrors = {};
 
@@ -306,31 +313,31 @@ function App() {
           </div>
           <div>
             <div>
-              <img src={amenities} alt="AM" className="amenities-img" />
+              <img src={lift} alt="AM" className="amenities-img" />
             </div>
             <div>2 Branded Lifts</div>
           </div>
           <div>
             <div>
-              <img src={amenities} alt="AM" className="amenities-img" />
+              <img src={sanitory} alt="AM" className="amenities-img" />
             </div>
             <div>Premium Sanitary Fittting</div>
           </div>
           <div>
             <div>
-              <img src={amenities} alt="AM" className="amenities-img" />
+              <img src={vastu} alt="AM" className="amenities-img" />
             </div>
             <div>Vastu Compliant Flats</div>
           </div>
           <div>
             <div>
-              <img src={amenities} alt="AM" className="amenities-img" />
+              <img src={healthClub} alt="AM" className="amenities-img" />
             </div>
             <div>Health Club</div>
           </div>
           <div>
             <div>
-              <img src={amenities} alt="AM" className="amenities-img" />
+              <img src={rain} alt="AM" className="amenities-img" />
             </div>
             <div>Rain Water Harvesting</div>
           </div>
@@ -342,13 +349,13 @@ function App() {
           </div>
           <div>
             <div>
-              <img src={amenities} alt="AM" className="amenities-img" />
+              <img src={carpark} alt="AM" className="amenities-img" />
             </div>
             <div>Stacked Car Parking</div>
           </div>
           <div>
             <div>
-              <img src={amenities} alt="AM" className="amenities-img" />
+              <img src={cctv} alt="AM" className="amenities-img" />
             </div>
             <div>CCTV Surveliance in Areas</div>
           </div>
