@@ -16,10 +16,61 @@ import sanitory from './bathtub.png';
 import rain from './rain.png';
 import carpark from './stackedCar.png';
 import cctv from './CCTV.png';
+import swing from './swing.png';
+import grass from './grass.png';
+import yoga from './yoga.png';
+import terrace from './terraceGarden.png';
+import cabana from './cabana.png';
 
 var PageErrors = {};
 
 function App() {
+  const showPopup = async () => {
+    const { value: formValues } = await Swal.fire({
+      title: 'Enter your details',
+      html:
+        '<input id="leadNamePopup" class="swal2-input" placeholder="Name">' +
+        '<input id="emailPopup" class="swal2-input" placeholder="Email">' +
+        '<input id="mobilePopup" class="swal2-input" placeholder="Mobile No.">',
+      focusConfirm: false,
+      showCancelButton: true,
+      confirmButtonText: 'Submit',
+      preConfirm: () => {
+        return [
+          document.getElementById('leadNamePopup').value,
+          document.getElementById('emailPopup').value,
+          document.getElementById('mobilePopup').value,
+        ];
+      },
+    });
+
+    if (formValues) {
+      // Handle form submission (formValues contains input values)
+      console.log('Submitted values:', formValues, formValues[0]);
+      // You can perform further actions with the formValues here
+      try {
+        await fetch(
+          url +
+            new URLSearchParams({
+              'entry.254579040': formValues[0],
+              'entry.2078466645': formValues[1],
+              'entry.957184084': formValues[2],
+            }),
+          {
+            mode: 'no-cors',
+          }
+        );
+        alertSubmitPopup();
+      } catch (e) {
+        alertErrorPopup();
+        console.log(e.message);
+      }
+    }
+  };
+
+  // Trigger the popup
+  //showPopup();
+
   const [formData, setFormData] = useState({
     leadName: '',
     email: '',
@@ -366,37 +417,49 @@ function App() {
         <div className="flexDiv amenitiesDiv">
           <div>
             <div>
-              <img src={amenities} alt="AM" className="amenities-img" />
+              <img src={swing} alt="AM" className="amenities-img" />
             </div>
             <div>Swing For Toddlers</div>
           </div>
           <div>
             <div>
-              <img src={amenities} alt="AM" className="amenities-img" />
+              <img src={grass} alt="AM" className="amenities-img" />
             </div>
             <div>Green Area</div>
           </div>
           <div>
             <div>
-              <img src={amenities} alt="AM" className="amenities-img" />
+              <img src={yoga} alt="AM" className="amenities-img" />
             </div>
-            <div>Meditaion / Yoga Zone</div>
+            <div>Meditation / Yoga Zone</div>
           </div>
           <div>
             <div>
-              <img src={amenities} alt="AM" className="amenities-img" />
+              <img src={terrace} alt="AM" className="amenities-img" />
             </div>
             <div>Terrace Garden</div>
           </div>
           <div>
             <div>
-              <img src={amenities} alt="AM" className="amenities-img" />
+              <img src={cabana} alt="AM" className="amenities-img" />
             </div>
             <div>Cabana Seating</div>
           </div>
         </div>
       </div>
+      <div id="siteLocation" className="App">
+        <div>
+          <h2>Site Location</h2>
+        </div>
+        <div>
+          Tavisa, New Link Road, Near Evershine Nagar, Next to Landmark
+          Restaurant Malad (West) Pincode - 400064
+        </div>
+      </div>
       <div className="App">
+        <div>
+          <h2>MahaRera Registered</h2>
+        </div>
         <div>
           The project is registered under{' '}
           <a href="https://maharera.mahaonline.gov.in">
