@@ -10,7 +10,13 @@ const Header = () => {
     <div className="sticky-header">
       <div className="mobile-contact-us-header">
         <Typography component="div" sx={{ flexGrow: 1 }} className="small-font">
-          +91-8828823099 / +91-9819316013
+          <a href="tel:+918828823099" className="aTagColor">
+            +91-8828823099
+          </a>{' '}
+          /
+          <a href="tel:+919819316013" className="aTagColor">
+            +91-9819316013
+          </a>
         </Typography>
         <Typography
           component="div"
@@ -36,7 +42,7 @@ const Header = () => {
               style={{ width: '10%', height: 'auto' }}
             />
             <Typography variant="h3" component="div" sx={{ flexGrow: 1 }}>
-              Cementers
+              Cementers Developers
             </Typography>
           </Toolbar>
         </Container>
