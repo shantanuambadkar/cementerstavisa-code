@@ -14,9 +14,9 @@ body {
 }
 
 .floorPlan-div {
-  display: flex;
+  display: flex !important;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .topbar {
@@ -35,12 +35,7 @@ body {
 .z-index-topbar {
   z-index: 100;
 }
-.background-content {
-  background-color: blanchedalmond;
-  /* min-height: 10vh; */
-  padding: 5vh;
-  /* border: 2px dashed #e67e22; */
-}
+
 h2 {
   margin: 0.5%;
   color: #05a4d4;
@@ -127,11 +122,18 @@ h2 {
     height: 120vh;
     width: 39vw !important;
   }
+  .flexDivAmenities {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .amenitiesDiv {
-  background-color: blanchedalmond;
+  background-color: #3586ff;
   padding: 25px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
 
 .fullWidth {
@@ -149,6 +151,14 @@ h2 {
 
 .amenities-img {
   width: 20%;
+}
+
+.amenities-img-grass {
+  width: 30%;
+}
+
+.startTextAlign {
+  text-align: start;
 }
 
 .formBorder {

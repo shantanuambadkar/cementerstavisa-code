@@ -12,19 +12,84 @@ import headerBuilding from './compressedPNG/MainBuilding.webp';
 import lift from './Lift.png';
 import healthClub from './healthClub.png';
 import vastu from './vastu.png';
-import sanitory from './bathtub.png';
+import sanitary from './bathtub.png';
 import rain from './rain.png';
 import carpark from './stackedCar.png';
+import floor from './floor.png';
 import cctv from './CCTV.png';
 import swing from './swing.png';
 import grass from './grass.png';
 import yoga from './yoga.png';
 import terrace from './terraceGarden.png';
 import cabana from './cabana.png';
+import Amenities from './Amenities.js';
+import TowerFloorPlan from './TowerFloorPlan.js';
 
 var PageErrors = {};
 
 function App() {
+  //Carousel code start
+
+  const images = [
+    { url: amenities, text: '9 Storey Building', classList: 'amenities-img' },
+    { url: lift, text: '2 Branded Lifts', classList: 'amenities-img' },
+    {
+      url: sanitary,
+      text: 'Premium Sanitary Fittting',
+      classList: 'amenities-img',
+    },
+    {
+      url: vastu,
+      text: 'Vastu Compliant Flats',
+      classList: 'amenities-img',
+    },
+    {
+      url: healthClub,
+      text: 'Health Club',
+      classList: 'amenities-img',
+    },
+    {
+      url: rain,
+      text: 'Rain Water Harvesting',
+      classList: 'amenities-img',
+    },
+    {
+      url: floor,
+      text: 'Premium Verified Floors',
+      classList: 'amenities-img',
+    },
+    {
+      url: carpark,
+      text: 'Stacked Car Parking',
+      classList: 'amenities-img',
+    },
+    {
+      url: cctv,
+      text: 'CCTV Surveliance in Areas',
+      classList: 'amenities-img',
+    },
+    // Add more images with their respective text
+  ];
+
+  const terraceImages = [
+    {
+      url: swing,
+      text: 'Swing For Toddlers',
+      classList: 'amenities-img',
+    },
+    { url: grass, text: 'Green Area', classList: 'amenities-img-grass' },
+    { url: yoga, text: 'Meditation / Yoga Zone', classList: 'amenities-img' },
+    { url: terrace, text: 'Terrace Garden', classList: 'amenities-img' },
+    { url: cabana, text: 'Cabana Seating', classList: 'amenities-img' },
+  ];
+
+  const floorPlanImages = [
+    { url: grFloorPlan, text: 'Ground Floor Plan' },
+    { url: floorPlan, text: 'Floor Plan' },
+  ];
+
+  //Carousel code end
+
   /* const showPopup = async () => {
     const { value: formValues } = await Swal.fire({
       title: 'Enter your details',
@@ -192,7 +257,7 @@ function App() {
             </div>
           </div>
           <div className="mainBuildingDiv missionTextDiv formDiv">
-            <div className="background-content">
+            <div className="amenitiesDiv">
               <form onSubmit={handleSubmit}>
                 <Grid
                   container
@@ -329,122 +394,30 @@ function App() {
             />
           </div>
         </div>
+        <div>
+          <h2>Tower Configuration</h2>
+        </div>
+        <div>
+          <h3>1BHK - 434 Rera Carpet</h3>
+          <br />
+          <h3>2BHK - 557 Rera Carpet</h3>
+        </div>
         <div className="amenitiesDiv">
-          <div className="flexDiv towerconfigDiv">
-            <div>
-              <div>Tower Configuration</div>
-              <div>1BHK - 434 Rera Carpet</div>
-              <div>2BHK - 557 Rera Carpet</div>
-            </div>
-            <div>
-              <div className="floorPlan-div">
-                <img
-                  className="floorplan-img"
-                  src={grFloorPlan}
-                  alt="GroundFloorPlan"
-                />
-                <img
-                  className="floorplan-img"
-                  src={floorPlan}
-                  alt="FloorPlan"
-                />
-              </div>
-            </div>
+          <div>
+            <TowerFloorPlan images={floorPlanImages} />
           </div>
         </div>
         <div>
           <h2>Project Amenities</h2>
         </div>
-        <div className="flexDiv amenitiesDiv">
-          <div>
-            <div>
-              <img src={amenities} alt="AM" className="amenities-img" />
-            </div>
-            <div>9 Storey Building</div>
-          </div>
-          <div>
-            <div>
-              <img src={lift} alt="AM" className="amenities-img" />
-            </div>
-            <div>2 Branded Lifts</div>
-          </div>
-          <div>
-            <div>
-              <img src={sanitory} alt="AM" className="amenities-img" />
-            </div>
-            <div>Premium Sanitary Fittting</div>
-          </div>
-          <div>
-            <div>
-              <img src={vastu} alt="AM" className="amenities-img" />
-            </div>
-            <div>Vastu Compliant Flats</div>
-          </div>
-          <div>
-            <div>
-              <img src={healthClub} alt="AM" className="amenities-img" />
-            </div>
-            <div>Health Club</div>
-          </div>
-          <div>
-            <div>
-              <img src={rain} alt="AM" className="amenities-img" />
-            </div>
-            <div>Rain Water Harvesting</div>
-          </div>
-          <div>
-            <div>
-              <img src={amenities} alt="AM" className="amenities-img" />
-            </div>
-            <div>Premium Verified Floors</div>
-          </div>
-          <div>
-            <div>
-              <img src={carpark} alt="AM" className="amenities-img" />
-            </div>
-            <div>Stacked Car Parking</div>
-          </div>
-          <div>
-            <div>
-              <img src={cctv} alt="AM" className="amenities-img" />
-            </div>
-            <div>CCTV Surveliance in Areas</div>
-          </div>
+        <div className="amenitiesDiv">
+          <Amenities images={images} />
         </div>
         <div>
           <h2>Terrace Amenities</h2>
         </div>
-        <div className="flexDiv amenitiesDiv">
-          <div>
-            <div>
-              <img src={swing} alt="AM" className="amenities-img" />
-            </div>
-            <div>Swing For Toddlers</div>
-          </div>
-          <div>
-            <div>
-              <img src={grass} alt="AM" className="amenities-img" />
-            </div>
-            <div>Green Area</div>
-          </div>
-          <div>
-            <div>
-              <img src={yoga} alt="AM" className="amenities-img" />
-            </div>
-            <div>Meditation / Yoga Zone</div>
-          </div>
-          <div>
-            <div>
-              <img src={terrace} alt="AM" className="amenities-img" />
-            </div>
-            <div>Terrace Garden</div>
-          </div>
-          <div>
-            <div>
-              <img src={cabana} alt="AM" className="amenities-img" />
-            </div>
-            <div>Cabana Seating</div>
-          </div>
+        <div className="amenitiesDiv">
+          <Amenities images={terraceImages} />
         </div>
       </div>
       <div id="siteLocation" className="App">
