@@ -189,7 +189,23 @@ function App() {
     });
   };
 
+  function gtag_report_conversion(url) {
+    var gtag = window.gtag || function () {};
+    var callback = function () {
+      if (typeof url != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+      send_to: 'AW-11442235311/dC7SCJGel4AZEK_PitAq',
+      event_callback: callback,
+    });
+    return false;
+  }
+
   const postToGoogleSheet = async () => {
+    gtag_report_conversion('https://cementers.co.in');
+
     try {
       await fetch(
         url +
